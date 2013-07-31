@@ -1,0 +1,131 @@
+;; -*- mode: org -*-
+
+This is an outline with hyperlinks formatted in [[http://orgmode.org/][org-mode]] (Emacs users, either C-c C-o or click that link!).
+
+* Sprints (Monday - Sunday)
+** DONE 2009-11-23
+   CLOSED: [2009-11-30 Mon 09:15]
+*** DONE [[*00%20Use%20the%20best%20possible%20build%20tool%20Leiningen][Use Leiningen]]
+    CLOSED: [2009-11-28 Sat 09:07]
+   - [X] Install lein
+   - [X] Create project.clj file
+   - [X] Create -main
+   - [X] Run with uberjar
+*** DONE [[*01%20Make%20code%20available%20in%20best%20possible%20repository%20Clojars][Use Clojars]]
+    CLOSED: [2009-11-30 Mon 09:15]
+   - [X] Install and configure lein-clojars plugin
+   - [X] Run lein keygen and paste into clojars profile
+   - [X] Push to Clojars
+** DONE 2009-11-30
+   DEADLINE: <2009-12-06 Sun>
+*** DONE [[*05%20The%20code%20should%20be%20tested][Figure out how to write tests]]
+    CLOSED: [2009-12-03 Thu 09:59]
+    - [X] Find an example: incanter's [[http://github.com/liebke/incanter/blob/master/test/incanter/bayes_tests.clj][Bayesian tests]]
+    - [X] Unit test deck creation.
+      - the namespace for the test class has to be flat, not.nested.like.so
+    - [X] Make a template file for test code
+    - [X] Cover hand ranking
+** DONE 2009-12-07
+   DEADLINE: <2009-12-13 Sun> CLOSED: [2009-12-13 Sun 21:38]
+*** DONE [[*03%20Need%20to%20support%20betting][Keep track of individual chips & pot]]
+    CLOSED: [2009-12-13 Sun 18:24]
+** DONE 2009-12-14
+   CLOSED: [2009-12-21 Mon 09:20]
+*** DONE [[*08%20Must%20use%20clojure%20contrib][Replace craptastic shuffle method with seq-utils/shuffle]]
+    CLOSED: [2009-12-16 Wed 09:43]
+*** DONE [[*0A%20The%20code%20must%20be%20compatible%20with%20the%20master%20branch%20of%20Clojure][Update Clojure & contrib to 1.1-master]]
+    CLOSED: [2009-12-21 Mon 09:20]
+** DONE 2009-12-21
+   - nothing accomplished :-(
+** DONE 2009-12-28
+*** DONE [[*12%20Only%20players%20can%20bet][Handle invalid betters]]
+*** DONE [[*12%20Only%20players%20can%20bet][Test betting edge cases]]
+*** DONE [[*13%20The%20code%20must%20stay%20current%20with%20the%20new%20branch%20of%20Clojure][Switch to the new branch]]
+*** DONE [[id:E2640AA9-11DE-40C3-BB1F-7F3DCD7098C7][Adopt semantic versioning]]
+    - already using maj.min.point version
+    - need to tag as semver and "vMAJ.MIN.POINT"
+*** DONE [[id:F5062083-3525-47D6-BF94-4D7249D7866C][Update all copyrights]]
+** DONE [2010-01-04 Mon]
+   Sadly, nothing accomplished
+** DONE [2010-01-11 Mon]
+*** DONE [[*16%20Proper%20namespace%20directory%20structure%20must%20be%20used][refactor code into namespaced directories]]
+** DONE [2010-01-18 Mon]
+*** DONE [[*17%20The%20test%20suites%20may%20not%20take%20too%20long][Try Nailgun]]
+    - [X] try plugin for Leiningen
+      - just runs server...
+*** DONE restore some prior functionality
+    - [X] add cash-in / buy out code as part of betting
+    - [X] basic betting without safety checks
+*** DONE [[*18%20It%20should%20not%20be%20too%20painful%20to%20run%20the%20code][Use the run plugin]]
+** DONE [2010-01-25 Mon]
+*** DONE [[*16%20Proper%20namespace%20directory%20structure%20must%20be%20used][Refactor namespaces as layers]]
+*** DONE [[*17%20The%20test%20suites%20may%20not%20take%20too%20long][Use clojure-test-mode]]
+*** DONE [[*17%20The%20test%20suites%20may%20not%20take%20too%20long][Try Nailgun]]
+    - [X] apply [[http://groups.google.com/group/leiningen/browse_thread/thread/66c6c72dba4bbd47/84727f2fa11c661d][ng patch]]?   
+      - somewhat painful, asked Lein group to make changes official 
+** TODO [2010-02-01 Mon]
+*** TODO [[*20%20The%20project%20must%20be%20work%20with%20the%20master%20branch%20of%20Leiningen][Resolve Lein 1.1 RC1 probs]]
+*** TODO [[*03%20Need%20to%20support%20betting][Ensure no edge cases in betting]]
+*** TODO [[*19%20The%20test%20code%20should%20be%20written%20well][Cleanup test dupe code]]
+** TODO FUTURE
+*** TODO [[*07%20The%20code%20must%20decide%20the%20winner%20s][Determine win/tie/loss for hands of same basic strength]]
+*** TODO [[*09%20Must%20use%20atoms%20and%20refs%20somewhat%20sensibly][Rebuild game as an atomized map]]
+* Product backlog
+** DONE 00 Use the best possible build tool (Leiningen)
+   CLOSED: [2009-11-28 Sat 09:09]
+** DONE 01 Make code available in best possible repository (Clojars)
+   CLOSED: [2009-11-30 Mon 09:15]
+** DONE 02 Need to dole out chips
+   CLOSED: [2009-12-13 Sun 20:20]
+** TODO 03 Need to support betting
+** TODO 04 Need to support side pots
+** DONE 05 Need to introduce testing to the codebase
+   CLOSED: [2009-12-06 Sun 21:02]
+** TODO 06 The functions should have usage and return value documentation
+** TODO 07 The code must decide the winner(s)
+** DONE 08 Must use clojure-contrib
+   CLOSED: [2009-12-21 Mon 09:27]
+** TODO 09 Must use atoms and refs somewhat sensibly
+** DONE 0A The code must stay compatible with the master branch of Clojure
+** TODO [#C] 10 Integrate with Pokersource?
+ - [2009-12-19 Sat] [[http://news.gmane.org/find-root.php%3Fgroup%3Dgmane.comp.games.pokersource.user&article%3D1009][Contacted by Pokersource devs]] 
+** TODO [#A] 11 Must determine best 5 card hand out of hole cards + widow
+** DONE 12 Only players can bet
+** DONE 13 The code must stay current with the new branch of Clojure
+   :PROPERTIES:
+   :ID:       BCE36804-498D-442A-AE1D-5AE930E2189E
+   :END:
+   - new branch is obsolete as of deftype & kin being folded into the master branch
+** DONE 14 The project must follow [[http://semver.org/][semantic versioning]] guidelines
+   :PROPERTIES:
+   :ID:       E2640AA9-11DE-40C3-BB1F-7F3DCD7098C7
+   :END:
+** TODO 15 Copyright information must stay current
+   :PROPERTIES:
+   :ID:       F5062083-3525-47D6-BF94-4D7249D7866C
+   :END:
+** DONE 16 Proper namespace directory structure must be used
+   - [X] no single segment namespaces
+   - [X] avoid cyclic dependencies between namespaces
+** DONE 17 The test suites may not take too long
+   
+** DONE 18 It should not be too painful to run the code
+   - [2010-01-26 Tue] plugin not working with lein-1.1
+   - Run plugin = awesome
+** TODO 19 The test code should be written well
+** TODO 1A Commenting should be done properly
+   - (comment) ?
+** TODO 20 The project must be work with the master branch of Leiningen
+** TODO FF Migrate Backlog outside of Emacs
+* Misc ideas
+** DONE Experiment with a contrib lib
+   CLOSED: [2009-12-21 Mon 09:24]
+** DONE Read someone else's code
+   CLOSED: [2009-12-21 Mon 09:24]
+* Info
+** Leiningen
+   [[http://github.com/technomancy/leiningen]]
+** Clojars
+   [[http://clojars.org/]]
+   account = seths
+   
